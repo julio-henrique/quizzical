@@ -1,0 +1,49 @@
+.StartPage {
+    background-image: url("../../images/blob-5.svg"), url("../../images/blobs.svg");
+    background-repeat: no-repeat;
+    background-position: bottom -60px right 0,
+                        top -600px left 0px, 
+                        top right;
+
+    max-width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* background-position: right calc(28vw - 30%) top calc(50vh - 20vw), left calc(-20vw + 20%) bottom calc(22vh - 10vw); */
+/* background-position: right calc(20vw + 15%) bottom calc(25vh - 15vw), left calc(-20vw + 20%) bottom calc(22vh - 10vw); */
+
+
+.startPageContainer h1 {
+    text-align: center;
+    font-size: 3.1rem;
+    color: #293264;
+    line-height: 37px;
+    letter-spacing: 0.3rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+
+.startPageContainer p {
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #293264;
+    margin: 7px 0;
+}
+
+.startPageContainer button {
+    padding: 2rem 13rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background-color: #4D5B9E;
+    outline: none;
+    border: none;
+    color: #F5F7FB;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    margin: 20px 57px;
+}

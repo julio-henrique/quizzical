@@ -5,3 +5,25 @@
   font-size: 62.5%;
 }
 
+body { 
+  background-color: #F5F7FB;
+}
+/* container, questions, separator */
+
+.container {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+
+  font-size: 5rem;
+}
+
+.questions {
+  display: flex;
+}
+
+.separator {
+  background-color: black;
+  padding: 1px 0;
+  width: 100%;
+}
