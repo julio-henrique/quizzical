@@ -1,40 +1,56 @@
-// import '../../App.css'
-
 export function QuestionPage() {
     return (
         <section className="container">
-            <div className="questions">
-                <h2 className="" >Questions</h2>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
+            <div className="questions--card">
+                <h2 className="" >How would one say goodbye in Spanish?</h2>
+                <div className="answers--section" >
+                    <p className="answers" >Adiós</p>
+                    <p className="answers" >Hola</p>
+                    <p className="answers" >Au Revoir</p>
+                    <p className="answers" >Salir</p>
+                </div>
             </div>
-                <div className="separator" />
-            <div className="questions">
-                <h2>Questions</h2>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
+            <div className="separator" />
+            <div className="questions--card">
+                <h2 className="" >Which best selling toy of 1983 caused hysteria, resulting in riots breaking in stores?</h2>
+                <div className="answers--section" >
+                    <p className="answers" >Cabbage Patch Kids</p>
+                    <p className="answers" >Transformers</p>
+                    <p className="answers" >Care Bears</p>
+                    <p className="answers" >Rubik’s Cube</p>
+                </div>
             </div>
-                <div className="separator" />
-            <div className="questions">
-                <h2>Questions</h2>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
+            <div className="separator" />
+            <div className="questions--card">
+                <h2 className="" >How would one say goodbye in Spanish?</h2>
+                <div className="answers--section" >
+                    <p className="answers" >Adiós</p>
+                    <p className="answers" >Hola</p>
+                    <p className="answers" >Au Revoir</p>
+                    <p className="answers" >Salir</p>
+                </div>
             </div>
-                <div className="separator" />
-            <div className="questions">
-                <h2>Questions</h2>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
-                <p>answers</p>
+            <div className="separator" />
+            <div className="questions--card">
+                <h2 className="" >Which best selling toy of 1983 caused hysteria, resulting in riots breaking in stores?</h2>
+                <div className="answers--section" >
+                    <p className="answers" >Cabbage Patch Kids</p>
+                    <p className="answers" >Transformers</p>
+                    <p className="answers" >Care Bears</p>
+                    <p className="answers" >Rubik’s Cube</p>
+                </div>
             </div>
-                <div className="separator" />
+            <div className="separator" />
+            <div className="questions--card">
+                <h2 className="" >How would one say goodbye in Spanish?</h2>
+                <div className="answers--section" >
+                    <p className="answers" >Adiós</p>
+                    <p className="answers" >Hola</p>
+                    <p className="answers" >Au Revoir</p>
+                    <p className="answers" >Salir</p>
+                </div>
+            </div>
+            <div className="separator" />
 
             <button>Check answers</button>
         </section>

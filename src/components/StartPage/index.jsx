@@ -7,7 +7,7 @@ export const StartPage = (props) => {
             <div className="startPageContainer">
                 <h1>Quizzical</h1>
                 <p>Teste os seus conhecimentos nesse incrível aplicativo</p>
-                <button onClick={props.pageToFalse} >Start quiz</button>
+                <button onClick={props.pageToFalse} >Começar quiz</button>
             </div>
         </section>
     )

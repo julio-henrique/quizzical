@@ -20,7 +20,7 @@
 .startPageContainer h1 {
     text-align: center;
     font-size: 3.1rem;
-    color: #293264;
+    color: var(--title-color);
     line-height: 37px;
     letter-spacing: 0.3rem;
     font-family: 'Karla', sans-serif;
@@ -31,19 +31,15 @@
     font-size: 1.8rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #293264;
+    color: var(--title-color);
     margin: 7px 0;
 }
 
-.startPageContainer button {
-    padding: 2rem 13rem;
+/* .startPageContainer button {
     font-size: 1.8rem;
-    cursor: pointer;
-    background-color: #4D5B9E;
-    outline: none;
-    border: none;
-    color: #F5F7FB;
+    font-weight: 500;
+    
+    padding: 2rem 13rem;
     border-radius: 15px;
-    font-family: 'Inter', sans-serif;
     margin: 20px 57px;
-}
+} */
