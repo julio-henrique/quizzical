@@ -22,7 +22,7 @@
     font-size: 3.1rem;
     color: var(--title-color);
     line-height: 37px;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     font-family: 'Karla', sans-serif;
     font-weight: 700;
 }
@@ -35,11 +35,11 @@
     margin: 7px 0;
 }
 
-/* .startPageContainer button {
+.startPageContainer button {
     font-size: 1.8rem;
     font-weight: 500;
     
-    padding: 2rem 13rem;
+    padding: 2rem 8rem;
     border-radius: 15px;
-    margin: 20px 57px;
-} */
+    margin-top: 2rem;
+}

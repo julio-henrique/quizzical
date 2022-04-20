@@ -8,14 +8,15 @@
 :root {
   --title-color: #293264;
   --button: #4D5B9E;
+  --gray: #DBDEF0;
 }
 
 body { 
   background-color: #F5F7FB;
   font-family: Inter, sans-serif;
 }
-/* container, questions, separator */
 
+/* Container */
 .container {
   max-width: 80%;
   width: 100%;
@@ -23,6 +24,7 @@ body {
   margin-top: 4rem;
 }
 
+/* Questions */
 .questions--card h2 {
   font-family: Karla, sans-serif;
   font-weight: bold;
@@ -32,6 +34,7 @@ body {
   margin-bottom: 1.4rem;
 }
 
+/* Answers */
 .answers--section {
   display: flex;
 }
@@ -52,13 +55,34 @@ body {
   margin-left: 0;
 }
 
+/* Answers selected */
+.answer--selected {
+  background-color: var(--gray);
+  border: none;
+}
+
+/* Answers selected */
+.answer--right {
+  background-color: #94D7A2;
+  border: none;
+}
+
+/* Answers selected */
+.answer--wrong {
+  background-color: #F8BCBC;
+  border: none;
+}
+
+
+/* Separator */
 .separator {
-  border: 1px solid #DBDEF0;
+  border: 1px solid var(--gray);
   width: 100%;
   margin: 1.5rem 0;
   margin-bottom: 3rem;
 }
 
+/* Button */
 button {
   display: flex;
   margin: 0 auto;

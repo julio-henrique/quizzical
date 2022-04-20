@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { StartPage } from './components/StartPage'
-import { Organizer } from './components/Organizer'
+import { QuestionPage } from './components/QuestionPage'
 
 import './App.css'
 
@@ -16,7 +16,7 @@ function App() {
       {
         startPageState
           ? <StartPage pageToFalse={startPageToFalse} />
-          : <Organizer />
+          : <QuestionPage />
       }
     </>
   )
