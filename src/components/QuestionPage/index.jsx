@@ -1,6 +1,7 @@
 export function QuestionPage({ questionsData }) {
-    const showQuestions = questionsData.map(item => {
-        // const { question,  }
+    const showQuestions = questionsData.map((item, index) => {
+        const { question, incorrect_answers, correct_answer } = item
+    
         /* 
         category: "Entertainment: Video Games"
 correct_answer: "GLaDOS"
@@ -10,13 +11,17 @@ question: "Who is the main antagonist in the Portal franchise?"
         */
         return (
             <>
-            <h2 className="" >How would one say goodbye in Spanish?</h2>
-                <div className="answers--section" >
-                <p className="answers answer--selected" >Adiós</p>
-                <p className="answers" >Hola</p>
-                <p className="answers" >Au Revoir</p>
-                <p className="answers" >Salir</p>
-                </div>
+            <div key={index}>
+                <h2 className="">{question}</h2>
+                    <div className="answers--section" >
+                    <p className="answers answer--selected" >{incorrect_answers[2]}</p>
+                    <p className="answers" >{incorrect_answers[0]}</p>
+                    <p className="answers" >{incorrect_answers[1]}</p>
+                    <p className="answers" >{correct_answer}</p>
+                    </div>
+                <div className="separator" />
+            </div>
+
             </>
         )
     })
@@ -25,26 +30,8 @@ question: "Who is the main antagonist in the Portal franchise?"
     return (
         <section className="container">
             <div className="questions--card">
-                <h2 className="" >How would one say goodbye in Spanish?</h2>
-                <div className="answers--section" >
-                    <p className="answers answer--selected" >Adiós</p>
-                    <p className="answers" >Hola</p>
-                    <p className="answers" >Au Revoir</p>
-                    <p className="answers" >Salir</p>
-                </div>
-            </div>            
-            <div className="separator" />
-            <div className="questions--card">
-                <h2 className="" >Which best selling toy of 1983 caused hysteria, resulting in riots breaking in stores?</h2>
-                <div className="answers--section" >
-                    <p className="answers" >Cabbage Patch Kids</p>
-                    <p className="answers answer--wrong" >Transformers</p>
-                    <p className="answers answer--right " >Care Bears</p>
-                    <p className="answers" >Rubik’s Cube</p>
-                </div>
+                {showQuestions}
             </div>
-            
-            <div className="separator" />
 
             {true ? <button>Check answers</button> : <button>Play Again</button>}
         </section>

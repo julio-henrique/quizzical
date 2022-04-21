@@ -14,10 +14,13 @@ function App() {
   }
   
   useEffect(() => {
-    fetch('https://opentdb.com/api.php?amount=5&type=multiple')
+    fetch('https://opentdb.com/api.php?amount=5&category=31&type=multiple')
+    // https://opentdb.com/api.php?amount=5&category=31
       .then(res => res.json())
       .then(data => setQuestionsData(data.results))
   }, [])
+  
+  console.log(questionsData)
 
   return (
     <>
