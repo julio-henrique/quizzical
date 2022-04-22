@@ -5,7 +5,6 @@ import { QuestionPage } from './components/QuestionPage'
 import { nanoid } from 'nanoid'
 
 import './App.css'
-// const url = "https://opentdb.com/api.php?amount=5&type=multiple"
 
 function App() {
   const [startPageState, setStartPageState] = useState(true)
@@ -19,7 +18,6 @@ function App() {
   function b64_to_utf8( str ) {
     return decodeURIComponent((window.atob( str )));
   }
-  fetch('https://opentdb.com/api.php?amount=5&category=31&type=multiple&encode=base64')
   
   useEffect(() => {
     fetch('https://opentdb.com/api.php?amount=5&category=31&type=multiple&encode=base64')
@@ -48,8 +46,6 @@ function App() {
         })
       })
   }, []) 
-
-  // console.log(apiData) 
 
   return (
     <>
