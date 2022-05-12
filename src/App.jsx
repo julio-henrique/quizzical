@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { StartPage } from './components/StartPage'
+// import { StartPage } from './components/StartPage'
 import { QuestionPage } from './components/QuestionPage'
 
 import { nanoid } from 'nanoid'
@@ -8,51 +8,30 @@ import './App.css'
 
 function App() {
   const [startPageState, setStartPageState] = useState(true)
-  const [apiData, setApiData] = useState([])
+  const [quizQuestions, setQuizQuestions] = useState([])
+  const [game, setGame] = useState(false)
+
   
   function startPageToFalse() {
     setStartPageState(prev => !prev)
   }
 
-  // The API is encoded, base64, here I'm decoding.
+  // The API is encoded in base64, here I'm decoding.
   function b64_to_utf8( str ) {
     return decodeURIComponent((window.atob( str )));
-  }
-  
+  }  
+
   useEffect(() => {
-    fetch('https://opentdb.com/api.php?amount=5&category=31&type=multiple&encode=base64')
-    .then(res => res.json())
-      .then(data => {
-        setApiData(() => {
-          let newArray = []
+    fetch('https://opentdb.com/api.php?amount=5&category=31&type=multiple')
+      .then(res => res.json())
+      .then(data => setQuizQuestions(data.results))
+  }, [game]) 
 
-          for (let i = 0; i < data.results.length; i++) {
-            newArray.push({
-              id: nanoid(),
-              question: b64_to_utf8(data.results[i].question),
-              correct_answer: b64_to_utf8(data.results[i].correct_answer),
-              
-              alternatives: [
-                ...data.results[i].incorrect_answers.map(incorrect => b64_to_utf8(incorrect)),
-                b64_to_utf8(data.results[i].correct_answer)
-              ].sort(() => Math.random() - 0.5),
-              
-              select_answer: '',
-              isCorrect: false
-            })
-          }
-
-          return newArray
-        })
-      })
-  }, []) 
-
+console.log(quizQuestions)
   return (
     <>
-      {
-        startPageState
-          ? <StartPage pageToFalse={startPageToFalse} />
-          : <QuestionPage apiData={apiData} />
+      { 
+           <QuestionPage quizQuestions={quizQuestions} />
       }
     </>
   )

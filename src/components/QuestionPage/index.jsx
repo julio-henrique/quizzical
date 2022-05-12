@@ -1,31 +1,26 @@
-import { nanoid } from 'nanoid'
-
-export function QuestionPage({ apiData }) {
-
-    const showQuestions = apiData.map((item) => {
+export function QuestionPage({ quizQuestions }) {
+    const showQuestions = quizQuestions.map((item, index) => {
         // Destructuring item
         const { question, alternatives, id  } = item
         
-        
         // maping and showing the alternitves
-        const showAlternatives = alternatives.map((itemAlternatives, ) => {
-            
-            // console.log(id)
-            return (    
-                <div 
-                    className="answers" 
-                >
-                    {itemAlternatives}
-                </div>
-            )
-        })
-
+        // const showAlternatives = alternatives.map((itemAlternatives, ) => {
+        //     console.log(itemAlternatives)
+        //     return (    
+        //         <div key={itemAlternatives.id}
+        //             className="answers" 
+        //         >
+        //             {itemAlternatives.answer}
+        //         </div>
+        //     )
+        // })
         return (
             <>
-                <h2 key={id} >{question}</h2>
+            <div key={id} />
+                <h2  >{question}</h2>
                     <div className="answers--section" >
 
-                            {showAlternatives}
+                            {/* {showAlternatives} */}
                     </div>
                 <div className="separator" />
             </>
