@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-// import { StartPage } from './components/StartPage'
+import { StartPage } from './components/StartPage'
 import { QuestionPage } from './components/QuestionPage'
 
 import { nanoid } from 'nanoid'
@@ -9,7 +9,7 @@ import './App.css'
 function App() {
   const [startPageState, setStartPageState] = useState(true)
   const [quizQuestions, setQuizQuestions] = useState([])
-  const [game, setGame] = useState(false)
+
 
   
   function startPageToFalse() {
@@ -25,13 +25,15 @@ function App() {
     fetch('https://opentdb.com/api.php?amount=5&category=31&type=multiple')
       .then(res => res.json())
       .then(data => setQuizQuestions(data.results))
-  }, [game]) 
+  }, []) 
 
 console.log(quizQuestions)
   return (
     <>
-      { 
-           <QuestionPage quizQuestions={quizQuestions} />
+      {
+        startPageState ?
+          <StartPage />
+          : <QuestionPage quizQuestions={quizQuestions} />
       }
     </>
   )
