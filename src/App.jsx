@@ -4,6 +4,8 @@ import { nanoid } from 'nanoid'
 import { Question } from "./components/Question"
 import { Start } from "./components/Start"
 
+import './App.css'
+
 export default function App() {
   // Variables
   const [startGame, setStartGame] = useState(false)
